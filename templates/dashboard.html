@@ -1,0 +1,34 @@
+<!-- SEARCH SKU -->
+  <form method="POST" action="/search" class="row g-2 mb-4">
+    <div class="col-md-4">
+      <input type="text" name="sku" class="form-control" placeholder="Masukkan SKU" autofocus required>
+    </div>
+
+    <div class="col-md-4">
+      <select name="filename" class="form-select" required>
+        <option value="">Pilih File Excel</option>
+        {% for file in files %}
+          <option value="{{ file }}">{{ file }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary w-100">Cari</button>
+    </div>
+  </form>
+
+  <a href="/upload" class="btn btn-success mb-3">Upload Excel</a>
+
+  <ul class="list-group">
+    {% for file in files %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ file }}
+        <a href="/batch/{{ file }}" class="btn btn-sm btn-outline-secondary">Lihat Isi</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+</body>
+</html>
