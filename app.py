@@ -113,9 +113,6 @@ def search():
 if __name__ == '_main_':
     app.run(debug=True, host='0.0.0.0')
     
-if __name__ == '__main__':
-    app.run(debug=True)
-
 import os
 
 if _name_ == '_main_':
