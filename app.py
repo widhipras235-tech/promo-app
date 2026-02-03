@@ -109,9 +109,6 @@ def search():
         tables=table,
         filename=f"Hasil pencarian SKU: {sku}"
     )
-
-if __name__ == '_main_':
-    app.run(debug=True, host='0.0.0.0')
     
 import os
 
